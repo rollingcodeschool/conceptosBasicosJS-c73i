@@ -22,7 +22,18 @@ do{
 
 let contador = 0;
 
+
 do{
     document.write(`<p>Renglón número ${contador} con do-while</p>`);
     contador--  // contador = contador - 1;
 }while( contador >= 1)
+
+/*
+for(inicializo una variable; condicion logica ; incremento o decremento de la variable){
+     todas las lineas de codigo que quiero repetir varias veces
+}
+*/
+
+for(let renglon = 1;  renglon <=10 ; renglon++){
+    document.write(`<p>Renglón número ${renglon} con for</p>`);
+}
