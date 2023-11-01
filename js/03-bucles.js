@@ -17,7 +17,7 @@ while( numero <= 10){
 do{
     todas las lineas de codigo que quiero repetir varias veces
     agregar un codigo para que la condicion no se cumpla en algún momento
-}while(condicion logica)
+}while(confirm)
 */
 
 let contador = 0;
