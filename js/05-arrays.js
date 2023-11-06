@@ -4,6 +4,17 @@ const productos = [];
 
 const juegos = ['counter-strike', 'Minecraft', 2023, true, 'valorant', 'half-life','lol'];
 
+function mostrarJuegos(){
+    document.write('<h2>Lista de juegos</h2>')
+    document.write(`<ul>`);
+    for(let i = 0; i < juegos.length; i++){
+        document.write(`<li>${juegos[i]}</li>`);
+    }
+    document.write(`</ul>`);
+}
+
+mostrarJuegos();
+
 //cantidad de elementos en el array
 console.log(juegos.length);
 
