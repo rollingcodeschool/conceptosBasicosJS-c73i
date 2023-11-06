@@ -57,4 +57,36 @@ for(let i = 0; i < juegos.length; i++){
 }
 document.write(`</ul>`);
 
+//eliminar elementos del array
+juegos.shift();
+document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`)
+document.write(`<ul>`);
+for(let i = 0; i < juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
+
+juegos.splice(3,1);
+// juegos.splice(3,3);
+// juegos.splice(3);
+
+document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`)
+document.write(`<ul>`);
+for(let i = 0; i < juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
+
+juegos.pop(); //borra el ultimo elemento del array
+document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`)
+document.write(`<ul>`);
+for(let i = 0; i < juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
+
+// juegos[3] = ['p1', 'p2', [35,36,37]]
+
+
+
 
