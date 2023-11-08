@@ -83,3 +83,19 @@ const juegosMKT = juegos.filter( juego => juego.includes('Kombat') );
 console.log(juegosMKT);
 
 mostrarArray(juegosMKT, 'Familia de juegos de MKT');
+
+const juegoBuscado = juegos.find( itemJuego => itemJuego.includes('Minecraft'));
+const juegoBuscado2 = juegos.find( itemJuego => itemJuego.includes('lol'));
+
+document.write(`<p>Juego buscado: ${juegoBuscado}</p>`);
+/*if(juegoBuscado2 !== undefined){
+    document.write(`<p>Juego buscado: ${juegoBuscado2}</p>`);
+}else{
+     document.write(`<p>Juego buscado: No se encontro el juego buscado</p>`);
+}*/ 
+
+// Operador ternario
+// (condicion logica)? todo la logica si se cumple la condicion : la logica si no se cumple la condicion
+
+const respuesta = (juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontro el termino buscado';
+document.write(`<p>Juego buscado: ${respuesta}</p>`);
