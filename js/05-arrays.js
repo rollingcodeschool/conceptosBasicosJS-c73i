@@ -4,16 +4,14 @@ const productos = [];
 
 const juegos = ['counter-strike', 'Minecraft', 2023, true, 'valorant', 'half-life','lol'];
 
-function mostrarJuegos(){
-    document.write('<h2>Lista de juegos</h2>')
+function mostrarJuegos(titulo){
+    document.write(`<h2>${titulo}</h2>`)
     document.write(`<ul>`);
     for(let i = 0; i < juegos.length; i++){
         document.write(`<li>${juegos[i]}</li>`);
     }
     document.write(`</ul>`);
 }
-
-mostrarJuegos();
 
 //cantidad de elementos en el array
 console.log(juegos.length);
@@ -26,77 +24,33 @@ document.write(`<p>El primer juego es ${juegos[0]}</p>`)
 document.write(`<p>El ultimo juego es ${juegos[juegos.length - 1]}</p>`)
 document.write(`<p>juego de la posicion 20: ${juegos[20]}</p>`)
 
-document.write('<h2>Lista de juegos</h2>')
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos('Lista de juegos')
 
 //agregar elementos al array
 juegos.unshift('god of war','Street fighter');
-document.write('<h2>Lista de juegos + 2 juegos extras</h2>')
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos('Lista de juegos + 2 juegos extras')
 
 juegos.splice(6,0,'Dark Souls');
-document.write(`<h2>Lista de juegos + 1, cantidad total (${juegos.length})</h2>`)
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos(`Lista de juegos + 1, cantidad total (${juegos.length})`)
 
-juegos.push('Mortal Kombat')
-document.write(`<h2>Lista de juegos + 1, cantidad total (${juegos.length})</h2>`)
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+juegos.push('Mortal Kombat');
+mostrarJuegos(`Lista de juegos + 1, cantidad total (${juegos.length})`)
 
 //modificamos los elementos de un array
 juegos[5] = 'Stardew valley';
-
-document.write(`<h2>Lista de juegos, modificamos un elemento del array (${juegos.length})</h2>`)
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos(`Lista de juegos, modificamos un elemento del array (${juegos.length})`)
 
 //eliminar elementos del array
 juegos.shift();
-document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`)
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos(`Lista de juegos - 1 elemento del array (${juegos.length})`)
 
 juegos.splice(3,1);
 // juegos.splice(3,3);
 // juegos.splice(3);
-
-document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`)
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos(`Lista de juegos - 1 elemento del array (${juegos.length})`)
 
 juegos.pop(); //borra el ultimo elemento del array
-document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`)
-document.write(`<ul>`);
-for(let i = 0; i < juegos.length; i++){
-    document.write(`<li>${juegos[i]}</li>`);
-}
-document.write(`</ul>`);
-
-// juegos[3] = ['p1', 'p2', [35,36,37]]
+mostrarJuegos(`Lista de juegos - 1 elemento del array (${juegos.length})`)
 
 
 
